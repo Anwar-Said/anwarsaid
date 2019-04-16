@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<!-- Website Title & Description for Search Engine purposes -->
+		<title>Code a Responsive Website with Twitter Bootstrap 3</title>
+		<meta name="description" content="Learn how to code your first responsive website with the new Twitter Bootstrap 3.">
+
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="includes/css/styles.css">
+
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+        
+        
+        
+        <script type="text/javascript" src="includes/js/jquery-1.8.2.min.js"></script>
+        
+        <script type="text/javascript">
+        
+            $(document).ready(function(){
+
+            $('#philosophy').click(function(){
+                $('#moreInfo').load("includes/philosophy.html");
+                });
+                
+                $('#marketLeaders').click(function(){
+                     $('#moreInfo').load("includes/marketLeaders.html");
+                 });
+                $('#help').click(function(){
+                     $('#moreInfo').load("includes/help.html");
+            });
+            
+        
+    });// document ends
+            
+            
+         </script>
+
+	</head>
+	<body>
+
+		<div class="container" id="main">
+
+			<div id = "mainNavBarID" class="navbar navbar-inverse  navbar-fixed-top">
+				
+				<h2 style="color: white; text-align: center; margin-top: 40px; font-family: serif;"> Anwar Said: Representation Learning on Networks Blogs </h2>
+				<div class="container">
+					
+
+					<div id = "mainNavBarID" class="nav-collapse collapse navbar-responsive-collapse">
+
+						<ul id = "menuBarID" class="nav navbar-nav ">
+							<li>
+								<a id="homeMenuButtonID" href="index.html">Home </a>
+							</li>
+							<li>
+								<a id="homeMenuButtonID" href="includes/about-us.html" class="" data-toggle = "">About Us</a>
+								
+							</li>
+
+							<li>
+								<a id="homeMenuButtonID" href="includes/Archive.html" class="" data-toggle = "">Archive </a>
+								
+							</li>
+
+						</ul>
+
+					</div><!-- end nav-collapse -->
+
+				</div><!-- end container -->
+			</div><!-- end navbar -->
+			
+			<div class="container" style="margin-top: 80px">
+
+
+				<div class="well">
+					
+					<h2 style="text-align: center"> Graph Laplacians </h2>
+					this is test <br>
+
+
+					test </br>
+
+					test
+
+				</div>
+
+				
+			</div><!-- end col-12 -->
+
+
+		
+		<script src="http://code.jquery.com/jquery.js"></script>
+
+		<!-- If no online access, fallback to our hardcoded version of jQuery -->
+		<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+
+		<!-- Bootstrap JS -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Custom JS -->
+		<script src="includes/js/script.js"></script>
+
+	</body>
+</html>
+
