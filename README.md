@@ -1,2 +1,2 @@
 # Blogs
-Representation learning with networks research
+Representation learning on networks research
