@@ -21,7 +21,9 @@
 		<!-- Include Modernizr in the head, before any other Javascript -->
 		<script src="includes/js/modernizr-2.6.2.min.js"></script>
         
-        
+        <script type="text/javascript" async
+  			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
         
         <script type="text/javascript" src="includes/js/jquery-1.8.2.min.js"></script>
         
@@ -87,10 +89,117 @@
 			<div class="container" style="margin-top: 80px">
 
 
-				<div class="well">
+				<div class="well" style = "font-family: arial;font-size: 20px;margin-left:50px;margin-right: 50px; line-height: 40px">
 					
-					<h2 style="text-align: center"> Graph Laplacians </h2>
+					<h2 style="text-align: center; font-family: serif;"> The Graph Laplacian and Resister Networks </h2>
+
+					<p> 
+
+					Countless real-world systems can be represented in the form of networks or graphs such as Social Networks, Biological Networks, the network of World Wide Web, the transport networks etc. Most of these systems are dynamic, multimodel and very complex consisting of millions of objects and their interactions. The daily basis interactions of real-world objects provide rich information about their everyday social behaviors which can be leverages to understand and explore these systems. However, how can we encode the interactions of these real world objects into a beautiful way such that it can be exploited to understand these systems? Graph is one of the nicest way to encode these complex systems. There are many ways including adjacency matrix, incident matrix and graph laplacian to represent a graph. Here, I present the explanation of one of the best known and most widely used graph representation: graph Laplacian and it's application resister network.<br />
+
+					For a simple undirected and unweighted graph, the graph Laplacian is N x N symmetric metrix <strong>L </strong> with elements </br> 
+
+					$$ 
+
+					\begin{equation}
+					  L_{u,v} = 
+					    \begin{cases}
+					      k_u  &if (u == v)\\
+					      -1 &if (u \sim v) \text{ u and v are neighbors} \\
+					      0 & \text{otherwise.}
+					    \end{cases}       
+					\end{equation}
+
+					 $$
+
+					 Where \(k_u\) is the degree of node u. Another way to write the same thing would be 
+
+					 $$
+
+					 L_{u,v} = k_u \delta_{uv}-A_{uv}
+
+					 $$
+
+					 where \(A_{uv}\) is an element of the adjacency matrix and \(\delta_{uv}\) is the Kronecker delta, which is 1 if u == v  and 0 otherwise. Laplacian can also be written in a matrix such as
+
+					 $$ L = D-A $$
+
+					 Where D is the diagonal matrix with the node degrees along its diagonal. Similarly, graph Laplacian can also be defined for weighted networks in which the binary values of adjacency matrix is replaced by the weights of the edges. 
+
+					</br>
+
+					The graph Laplacian has a variety of real-world applications including but not limited to resister networks, graph partitioning, dynamical systems and the theory of random walks. In the following section, we briefly discuss the resister network in the light of graph Laplacian application. 
+
+				</p>
+
+				<h2 style="text-align: center; font-family: serif;"> Resister Networks </h2>
+
+				<p> To study the properties of complex electrical circuts, they can be represented in the form of graphs where junctions represented by nodes and edges are the identical resistors of resistance <strong>R </strong> as shown in figure 1 below.<br /> <br />
+
+					<div style="width = 400px; height: 380px; font-size:80%; text-align:center;"><img src="images/1.png" alt="" width="400" height="300" style="padding-bottom:0.5em;" /> <br>
+						Figure 1: A resistor network with applied voltage. A network in which the edges are resistors and the vertices are electrical junctions between them, with a voltage applied between vertices s and t so as to generate a total current <strong>I</strong> [1]
+					.</div>
+
+					Suppose we apply a voltage between two nodes s and t such that a total current <strong>I</strong> flows from s to t through the network. After this mapping, many questions can be arised such as what the voltage is at any given node? what is the effective resistance of a pair of nodes? etc. <br>
+
+					The current flow in the network obeys Kirchhoff's current law, which is essentially a statement that electricity is conserved, so that the net current flowing in or out of any node is zero. Let \(V_i\) be teh voltage at node i, measured relative to any convenient potential. The Kirchhoff's law says that 
+
+					$$
+
+						\sum_v A_{uv} \frac{V_u - V_v}{R} - I_u = 0
+
+					$$  
+					Where \(I_i\) represents any current injected into node i by an external current source. In our case this external current is non-zero for the two nodes s and t connected to the external voltage [1]. 
+
 					
+					$$ 
+
+					\begin{equation}
+					  I_i = 
+					    \begin{cases}
+					      +I  & \text {for i = s,}\\
+					      -I &\text{for i = t,} \\
+					      0 & \text{otherwise.}
+					    \end{cases}       
+					\end{equation}
+
+					 $$
+				
+
+					 As the degree (\(k_i\)) of node i equals \(\sum_j A_{ij}\), which can also be written as \(k_i V_i-\sum_j A_{ij} V_j\) = RI, or 
+
+					 $$
+					 \sum_j (\delta_{ij} k_i - A_{ij})V_j = RI_i,
+					 $$
+					 which in matrix form is 
+
+					 $$
+
+					 LV = RI,
+
+					 $$
+
+					 Where <strong>L </strong> is once again a graph Laplacian.  This equation is a kind of matrix version of standard Ohm's law \(V = RI \) for a single resistor and by solving it for V, we can calculate the voltag at every node in the network. </br>
+
+					 <strong>Computing Effective Resistance:</strong> The effective resistance among two pair of vertices (\(Reff_{(uv)}\)) can be defined as the energy dessipation when a unit current is injected to the source node and removed on the target node [2]. In the case of many alternate paths between u and v, the effective resistance is low (electrically redundant) while it is high in case of fewer alternate paths (electrically important). <br> 
+
+					 To compute the effective resistance between two pair of nodes, once again Laplacain matrix provides a very nice way which is<br>
+
+					 $$
+
+					 Reff_({u,v)} = b_{uv}^T L^\prime b_{uv}
+
+					 $$
+					 Where \(b_{uv}\) equals \(b_u - b_v\). Note that \(b_u\) is one hot encoding or standard vector for node u and similarly for node v. 
+
+
+
+					 
+
+
+					                
+
+				 </p>	
 				</div>
 
 				
