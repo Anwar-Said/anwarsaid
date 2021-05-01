@@ -14,109 +14,22 @@
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="includes/css/styles.css">
-
-		<!-- Include Modernizr in the head, before any other Javascript -->
-		<script src="includes/js/modernizr-2.6.2.min.js"></script>
-        
-        <script type="text/javascript" async
-  			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
-		</script>
-        
-        <script type="text/javascript" src="includes/js/jquery-1.8.2.min.js"></script>
-        
-        <script type="text/javascript">
-        
-            $(document).ready(function(){
-
-            $('#philosophy').click(function(){
-                $('#moreInfo').load("includes/philosophy.html");
-                });
-                
-                $('#marketLeaders').click(function(){
-                     $('#moreInfo').load("includes/marketLeaders.html");
-                 });
-                $('#help').click(function(){
-                     $('#moreInfo').load("includes/help.html");
-            });
-            
-        
-    });// document ends
-            
-            
-         </script>
-
-	</head>
-	<body>
-
-		<div class="container" id="main">
-
-			<div id = "mainNavBarID" class="navbar navbar-inverse  navbar-fixed-top">
-				
-				<h2 style="color: white; text-align: center; margin-top: 40px; font-family: serif;"> Anwar Said: Representation Learning on Networks Blogs </h2>
-				<div class="container">
-					
-
-					<div id = "mainNavBarID" class="nav-collapse collapse navbar-responsive-collapse">
-
-						<ul id = "menuBarID" class="nav navbar-nav ">
-							<li>
-								<a id="homeMenuButtonID" href="index.html">Home </a>
-							</li>
-							<li>
-								<a id="homeMenuButtonID" href="includes/publications.html" class="" data-toggle = "">Publications</a>
-								
-							</li>
-
-							<li>
-								<a id="homeMenuButtonID" href="includes/archive.html" class="" data-toggle = "">Blogs </a>
-								
-							</li>
-							<li>
-								<a id="homeMenuButtonID" href="includes/codes.html" class="" data-toggle = "">Codes </a>
-								
-							</li>
-
-						</ul>
-
-					</div><!-- end nav-collapse -->
-
-				</div><!-- end container -->
-			</div><!-- end navbar -->
-			
-			<div class="container" style="margin-top: 80px">
-
-
-				<div class="well">
-					
-					<p style="font-size: 18px;margin-left:50px;margin-right: 50px; line-height: 30px">I am a  4th year Ph.D. research scholar in <a href="http://ai.itu.edu.pk/">AI Lab</a>, Department of Computer Science at Information Technology University, Lahore, Pakistan. I received M.Phil. (2016) degree in Computer Science from Quaid-i-Azam University, Islamabad, and M.Sc. degree with distinction from universtiy of Swat, Pakistan. My research belongs to the area of graph representation, which deals with the representation of graphs into a low-dimensional embedding space. In particular, I analyze and design graph descriptors that only rely on the graph's structure using constructs from graph theory. I also work in social network analysis and graph theory to design solutions for different real-world problems in different domains. More recently, I have expanded my research to deep learning on graphs with an emphasis on feature set representation and models' architecture. I am expected to be graduated this September. </p><br/>
-
-					<h4 style="margin-left: 300px">Email: anwar.said@itu.edu.pk </h4>
-					<div style="margin-left: 300px">
-					
-					 <a href="https://twitter.com/anwarsaid135" id="share-tw" class="sharer button"><i class="fa fa-3x fa-twitter-square"></i></a>&nbsp&nbsp
-
-					<a href="https://www.linkedin.com/in/anwar-said-9bb596b4/" id="share-li" class="sharer button"><i class="fa fa-3x fa-linkedin-square"></i></a>
-
-					<h5><a href= "https://scholar.google.com/citations?user=eSEelAgAAAAJ&hl=en">Google Scholar </a></h5>
-
-
-				</div>
-
-
-		
-		<script src="http://code.jquery.com/jquery.js"></script>
-
-		<!-- If no online access, fallback to our hardcoded version of jQuery -->
-		<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
-
-		<!-- Bootstrap JS -->
-		<script src="bootstrap/js/bootstrap.min.js"></script>
-
-		<!-- Custom JS -->
-		<script src="includes/js/script.js"></script>
+		<nav class="navbar navbar-dark bg-dark">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+			<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="includes/publications.html">Publications</a>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="includes/archive.html">Blogs</a>
+		      </li>
+		      <li class="nav-item">
+			<a class="nav-link" href="includes/archive.html">Codes</a>
+		      </li>			    
+		    </ul>			
+		</nav>
 
 	</body>
 </html>
