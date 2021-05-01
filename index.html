@@ -3,50 +3,25 @@
 <html>
 	<head>
 
-		<!-- Website Title & Description for Search Engine purposes -->
+		
 		<title>Representation Learning on Networks</title>
 		<meta name="description" content="">
 
-		<!-- Mobile viewport optimized -->
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<!-- Bootstrap CSS -->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+		<script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
+		
+		<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="../bootstrap/js/bootstrap.min.js"></script>
+		<link href="../includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		<link rel="../stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="includes/css/styles.css">
+		<link rel="stylesheet" href="css/styles.css">
 
-		<!-- Include Modernizr in the head, before any other Javascript -->
-		<script src="includes/js/modernizr-2.6.2.min.js"></script>
-        
-        <script type="text/javascript" async
-  			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
-		</script>
-        
-        <script type="text/javascript" src="includes/js/jquery-1.8.2.min.js"></script>
-        
-        <script type="text/javascript">
-        
-            $(document).ready(function(){
-
-            $('#philosophy').click(function(){
-                $('#moreInfo').load("includes/philosophy.html");
-                });
-                
-                $('#marketLeaders').click(function(){
-                     $('#moreInfo').load("includes/marketLeaders.html");
-                 });
-                $('#help').click(function(){
-                     $('#moreInfo').load("includes/help.html");
-            });
-            
-        
-    });// document ends
-            
-            
-         </script>
+		
 
 	</head>
 	<body>
@@ -55,7 +30,7 @@
 
 			<div id = "mainNavBarID" class="navbar navbar-inverse  navbar-fixed-top">
 				
-				<h2 style="color: white; text-align: center; margin-top: 40px; font-family: serif;"> Anwar Said: Representation Learning on Networks Blogs </h2>
+				<h2 style="color: white; text-align: center; margin-top: 40px"> Anwar Said: Representation Learning on Networks Blogs </h2>
 				<div class="container">
 					
 
@@ -63,11 +38,7 @@
 
 						<ul id = "menuBarID" class="nav navbar-nav ">
 							<li>
-								<a id="homeMenuButtonID" href="index.html">Home </a>
-							</li>
-							<li>
-								<a id="homeMenuButtonID" href="includes/about-us.html" class="" data-toggle = "">Bio</a>
-								
+								<a id="homeMenuButtonID" href="index.html">Home</a>
 							</li>
 							<li>
 								<a id="homeMenuButtonID" href="includes/publications.html" class="" data-toggle = "">Publications</a>
@@ -92,50 +63,71 @@
 			
 			<div class="container" style="margin-top: 80px">
 
+				<div class="well">
+					<h2 style="text-align: center; font-family: serif; font-size: 30px;"> About</h2>
+					<p style="font-size: 18px;margin-left:50px;margin-right: 50px; line-height: 30px">Anwar Said is a Ph.D. research scholar in the Department of Computer Science at Information Technology University, Lahore, Pakistan. He received MPhil (2016) degree in Computer Science from Quaid-i-Azam University, Islamabad, Pakistan. His research interests are in the area of representation learning, social networks, and machine learning. </p><br/>
 
-				<div class="well" style = "font-family: arial;font-size: 20px;margin-left:50px;margin-right: 50px; line-height: 40px">
+					<h4 style="margin-left: 300px">Email: anwar.said@itu.edu.pk </h4>
+					<div style="margin-left: 300px">
 					
-					<h2 style="text-align: center; font-family: serif;"> Blog: NetKI: Statistical Graph Representation in Nearly Linear Time </h2>
+					 <a href="https://twitter.com/anwarsaid135" id="share-tw" class="sharer button"><i class="fa fa-3x fa-twitter-square"></i></a>&nbsp&nbsp
 
-					<p> 
+					<a href="https://www.linkedin.com/in/anwar-said-9bb596b4/" id="share-li" class="sharer button"><i class="fa fa-3x fa-linkedin-square"></i></a>
 
-					Many real-world systems involve interactions between pairs of entities. Examples of such systems include social networks, financial systems, molecular graph structures, resistor networks, recommender systems, and protein-protein interaction networks. All of these systems and many more can be represented as graphs, that encode real-world objects (i.e., nodes) and the pair-wise interactions (i.e., edges) between them. More recently, graphs have also been used to model grid-structured data, such as images, to make the computations faster. Encoding graphs into low-dimensional embeddings enables one to employ the traditional machine learning and data mining algorithms on graph-structured data. This approach facilitates researchers to solve hard problems on graphs such as graph classification. The graph classification problem refers to the understanding of complex graph structures among different classes, and it has a variety of real-world applications ranging from text classification to molecules toxicity prediction and classifying community structures in a social network. However, graph classification poses several challenges such as permutation invariance, scalability, and,  the runtime efficiency of the encoding. Generally, the same graph can be represented by many adjacency matrices due to a lack order on nodes of a graph, therefore, the ideal encoding procedure for graph classification should be invariant under permutations of the nodes. Moreover, it should preserve the atomic structure of the graph based on the local and global positions of pairs of nodes. Unfortunately, existing graph classification approaches often require a pairwise comparison among the graphs or are based solely on a statistical and spectral representations, which is hard to compute. Therefore, appropriate representation methods are required to encode the atomic structure of the graph succinctly that are efficient.
-					
-					To address the aforementioned challenges, we propose using a well-known measure called the Kirchhoff index for extracting graph representations. The Kirchhoff index encapsulates the atomic structure of the graph because it incorporates the information regarding the number of paths and quality of paths. Typically, Kirchhoff index is defined in terms of effective resistance using the analogy of graphs in an electrical circuit. A graph can be transformed into an electrical circuit by replacing each edge with a unit resistance. The effective resistance between any two nodes in such a network refers to the equivalent electrical resistance between those two nodes. The sum of the effective resistance between all pair of nodes is referred to as the Kirchhoff index of a graph. We note that a higher value of effective resistance between nodes indicates an inferior or less robust overall connection between the nodes (as measured by the number and quality of paths between them). Since there is always a path between two nodes in a connected network (that is, any two nodes are always connected, maybe via some other nodes), the effective resistance between any two nodes is well defined. Consequently, the effective resistance of a graph, which is the sum of all pair-wise effective resistances between nodes, is also well defined. To illustrate this, consider the example in Figure below.
+					<h5><a href= "https://scholar.google.com/citations?user=eSEelAgAAAAJ&hl=en">Google Scholar </a></h5>
 
-				</p>
 
-				<div style="width = 900px; height: 520px; font-size:80%; text-align:center;"><img src="images/2.PNG" alt="" width="800" height="400" style="padding-bottom:0.5em;" /> <br>
-					Figure 1: (a) A graph with six nodes. (b)Each edge is replaced by a unit resistor and the effective resistance ($R_{eff}$) between nodes 1 and 2 is computed. The subsequent removal of edges as shown in (c), (d), and (e) results in the loss of path between nodes 1 and 2, which causes an increase in the effective resistance. The corresponding increase in the effective resistance is also shown with the figures. A loss of a good quality path results in large increase in the corresponding effective resistance.</div> <br />
+					</div>
+
 
 					
-				Using the idea of network Kirchhoff Index, we propose a new graph descriptor which is conceptually simple but at the same time powerful and efficient enough to scale on sufficiently large graphs. <strong> Our Idea:</strong> Graph atomic structure is encoded in the multiset of all nodes pairwise distances computed through Kirchhoff index. We compute multiset of pairwise distances and take the histogram to get the desired feature vector. <br />
-				
-				
-			To optimze and improve performance of our algorithm, we provide the approximate version of the algorithm denoted as NetKI. The idea of approximation was adopted from the existing study [2] which uses Sherman-Morrison formula for efficient approximation of network Kirchhoff Index. The interested readers are refer to [1] for further reading. Through extensive experiments, we show that NetKI provides improved results in terms of running time on large networks and the classification accuracy is within range 2% from the state-of-the-art results. 
-			
-			<br >
-			References
-			
-			<br>
-			
-			[1]. Said, A, Hassan, S. U., Abbas, W., \& Shabbir, M. NetKI: A Kirchhoff Index Based Statistical Graph Embedding in Nearly Linear Time. Neurocomputing, Elsevier. <br>
-			[2]. H. Li, Z. Zhang, Kirchho index as a measure of edge centrality in weighted networks: Nearly linear time algorithms, in: Proceedings of the Twenty-Ninth Annual ACM-SIAM Symposium on Discrete Algorithms, Society for 590 Industrial and Applied Mathematics, 2018, pp. 2377{2396.
-			</div>	
+				</div>
 			</div><!-- end col-12 -->
+			<footer id = "footerID">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+					<h4 style="text-align: center"> Anwar Said </h5>
+					</div><!-- end col-sm-2 -->
+
+					<div id = "aboutID" class="col-sm-3">
+						
+						<div class="social" style = "text-align: center">
+							  <a href="https://twitter.com/anwarsaid135" id="share-tw" class="sharer button"><i class="fa fa-3x fa-twitter-square"></i></a>&nbsp&nbsp&nbsp&nbsp
+
+							  <a href="https://www.linkedin.com/in/anwar-said-9bb596b4/" id="share-li" class="sharer button"><i class="fa fa-3x fa-linkedin-square"></i></a>&nbsp&nbsp&nbsp&nbsp
+
+							  <a href="https://scholar.google.com/citations?user=eSEelAgAAAAJ&hl=en" id="share-gp" class="sharer button"><i class="fa fa-3x fa-google-plus-square"></i></a>							  
+						</div>
+
+					</div><!-- end col-sm-4 -->
+
+					<div id = "displayCenterID" class="col-sm-3">
+						
+					</div><!-- end col-sm-2 -->
+
+					<div id = "disclaimerID" class="col-sm-3">
+						
+					</div><!-- end col-sm-2 -->
 
 
-		
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</footer>
+
+		<!-- All Javascript at the bottom of the page for faster page loading -->
+
+		<!-- First try for the online version of jQuery-->
 		<script src="http://code.jquery.com/jquery.js"></script>
 
 		<!-- If no online access, fallback to our hardcoded version of jQuery -->
 		<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
 
 		<!-- Bootstrap JS -->
-		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="../bootstrap/js/bootstrap.min.js"></script>
 
 		<!-- Custom JS -->
-		<script src="includes/js/script.js"></script>
+		<script src="js/script.js"></script>
 
 	</body>
 </html>
