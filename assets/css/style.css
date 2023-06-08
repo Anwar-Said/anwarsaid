@@ -536,3 +536,42 @@ body {
   font-size: 1.5rem;
 }
 
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  background-color: white; /* Set background color to white */
+  padding: 20px; /* Add padding */
+}
+
+.team-member {
+  border: 0px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+}
+.logos-container {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  background-color: white; /* Set background color to white */
+  padding: 20px; /* Add padding */
+}
+
+.logos {
+  border: 0px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.logos img {
+  width: 200px;
+  height: 100px;
+}
+
+
