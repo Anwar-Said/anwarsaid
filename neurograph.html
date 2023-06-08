@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/fontawsom-all.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <style>
+      .team-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+      }
+  
+      .team-member {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+  
+      .team-member img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
   </head>
 
   <body>
@@ -129,7 +147,7 @@
                    <a href="https://www.cchanglab.net">
                     <img
                       class="img-fluid"
-                      src="assets/img/logofinal.png"
+                      src="assets/img/fig1.png"
                       alt="image"
                   /></a>
                 <!-- </figure> -->
@@ -191,11 +209,43 @@
 
                  
               </article>
+              
+            <br/><br/>
+            <div>
+              <h2 align="center">Our Team</h2>
+              <div class="team-container">
+                <div class="team-member">
+                  <img src="assets/img/anwar.png" alt="Team Member 1">
+                  <h3>Team Member 1</h3>
+                  <p>Lab 1</p>
+                </div>
+                <div class="team-member">
+                  <img src="team1.jpg" alt="Team Member 1">
+                  <h3>Team Member 1</h3>
+                  <p>Lab 1</p>
+                </div>
+                <div class="team-member">
+                  <img src="team1.jpg" alt="Team Member 1">
+                  <h3>Team Member 1</h3>
+                  <p>Lab 1</p>
+                </div>
+                <div class="team-member">
+                  <img src="team1.jpg" alt="Team Member 1">
+                  <h3>Team Member 1</h3>
+                  <p>Lab 1</p>
+                </div>
+                <!-- Repeat the above block for each team member -->
+              
+              </div>
+              </div>
             </div>
           </div>
+          
         </div>
+    
       </div>
     </div>
+    
   </body>
 
   <script src="assets/js/jquery-3.2.1.min.js"></script>
