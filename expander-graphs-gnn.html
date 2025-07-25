@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Expander Graphs and GNNs: Predicting Spectral Gap Properties - Anwar Said</title>
+    <meta name="description" content="Exploring expander graphs, their importance, and our novel GNN model for predicting spectral gap properties." />
+    <meta name="keywords" content="expander graphs, spectral gap, GNN, graph neural networks, Ramanujan graphs, machine learning" />
+    <meta name="author" content="Anwar Said" />
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="container profile-container">
+        <div class="row">
+          <!-- Sidebar Profile Section -->
+          <div id="menu-jk" class="col-md-4">
+            <div class="pro-s-cover">
+              <img src="assets/img/profile.jpg" alt="Anwar Said" />
+              <h6>Anwar Said</h6>
+              <span>
+                Institute for Software Integrated Systems,<br />
+                Department of Computer Science,<br />
+                Vanderbilt University,<br />
+                Nashville, TN, USA.
+              </span>
+              <p>AI Research Scientist</p>
+              
+              <!-- Navigation Links -->
+              <div class="num-box w-100 d-flex">
+                <div class="text-left">
+                  <br />
+                  <a href="index.html#about" class="text-primary">About Me</a><br />
+                  <a href="index.html#latest" class="text-primary">Latest News</a><br />
+                  <a href="index.html#publication" class="text-primary">Publications</a><br />
+                  <a href="index.html#awards" class="text-primary">Awards</a><br />
+                  <a href="blogs.html" class="text-primary">Blog</a><br /> 
+                </div>
+              </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="con-cover">
+              <h4>Contact</h4>
+              <ul class="row no-margin">
+                <li>
+                  <a href="https://www.researchgate.net/profile/Anwar-Said" title="ResearchGate">
+                    <i class="fab fa-researchgate"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/anwarsaid135" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://scholar.google.com/citations?user=eSEelAgAAAAJ&hl=en" title="Google Scholar">
+                    <i class="fab fa-google"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/anwar-said-9bb596b4" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Anwar-Said/" title="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </li>
+              </ul>
+              
+              <div class="cd-ro row no-margin">
+                <span>Email Address</span>
+                <p>
+                  <a href="mailto:anwar.said@vanderbilt.edu">
+                    <i class="fas fa-envelope-square"></i>
+                    anwar.said at vanderbilt dot edu
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Main Content Section -->
+          <div class="col-md-8">
+            <div class="data-box">
+              <h1>Expander Graphs and Graph Neural Networks: Predicting Spectral Gap Properties</h1>
+              
+              <div class="meta">
+                <span>December 2024</span>
+                <span>Graph Theory</span>
+                <span>Machine Learning</span>
+                <span>Research</span>
+              </div>
+              
+              <div class="blog-post-body">
+                <p class="lead">
+                  In this post, we explore the fascinating world of expander graphs, their crucial role in computer science and mathematics, and our novel approach to predicting their spectral properties using Graph Neural Networks (GNNs).
+                </p>
+
+                <h2>What are Expander Graphs?</h2>
+                
+                <p>
+                  Expander graphs are sparse graphs that exhibit excellent connectivity properties. Formally, an expander graph is a graph where every subset of vertices has a large boundary relative to its size. This means that removing any small set of vertices or edges doesn't disconnect the graph into many small components.
+                </p>
+                
+                <p>
+                  More precisely, a graph \(G = (V, E)\) is called an \((\alpha, \beta)\)-expander if for every subset \(S \subseteq V\) with \(|S| \leq \alpha|V|\), the number of edges between \(S\) and \(V \setminus S\) is at least \(\beta|S|\). Here, \(\alpha\) and \(\beta\) are constants that determine the expansion quality.
+                </p>
+
+                <h2>Expander Graphs and Spectral Methods</h2>
+                
+                <p>
+                  Expander graphs are sparse graphs that exhibit excellent connectivity properties, making them fundamental in network design, distributed computing, and algorithm design. These graphs maintain robust connectivity even when some nodes or edges fail, providing reliable communication patterns and efficient routing structures. The key insight is that expander graphs have a large boundary relative to the size of any subset of vertices, ensuring that information flows efficiently throughout the network.
+                </p>
+                
+                <p>
+                  The most powerful method for identifying and analyzing expander graphs is through spectral methods, which examine the eigenvalues of the graph's adjacency or Laplacian matrix. The spectral gap—the difference between the largest and second-largest eigenvalues—serves as a crucial measure of expansion quality. Ramanujan graphs represent the optimal case, achieving the theoretical bound of \(2\sqrt{d-1}\) for \(d\)-regular graphs, where \(d\) is the degree. For the normalized Laplacian matrix, the spectral gap ranges from 0 to 2, with values close to 2 indicating excellent expansion properties and values close to 0 indicating poor connectivity. This spectral characterization provides both theoretical insights and practical tools for understanding graph structure and performance.
+                </p>
+
+                <h2>Our GNN Model for Spectral Gap Prediction</h2>
+                
+                <p>
+                  We train graph neural networks on 50,000 synthetic graphs that include different families of graphs such as Erdős-Rényi graphs, Cycle, Cliques, Stochastic block models, Watts-Strogatz (small world models), 2D grid, and many others. We train this model to predict the spectral gap.
+                </p>
+                
+                <p>
+                  Our GNN model includes a graph regression problem that includes message passing layers, graph convolutional layers, and then a sort convolution layer. For more details, our paper will be out soon.
+                </p>
+                <p>
+                  <strong>Try it yourself!</strong> You can explore our model and make predictions on your own graphs using our
+                  <a href="spectral-gap-predictor.html">interactive spectral gap predictor</a>. Generate different types of graphs and see how well our GNN model predicts their spectral gap properties.
+                </p>
+
+                <hr style="margin: 40px 0;">
+                
+                <div class="blog-nav">
+                  <a href="index.html" class="nav-link nav-link-prev">
+                    <span class="arrow-prev">←</span>
+                    Back to Home
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script type="application/javascript" src="assets/js/jquery-scrolltofixed-min.js"></script>
+  <script src="assets/js/script.js"></script>
+  
+  <!-- MathJax for mathematical notation -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</html> 
